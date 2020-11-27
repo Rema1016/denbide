@@ -13,6 +13,7 @@ void TITLE::init() {
 	TitleImg = loadImage("title.jpg");
 	AsobiImg = loadImage("asobi.jpg");
 	HaikeiImg = 0;
+	State = 0;
 }
 
 
@@ -20,8 +21,8 @@ void TITLE::init() {
 void TITLE::update(int* state) {
 	if (TitleFlg == 0) {
 		if (isTrigger(KEY_V)) {
-			TitleFlg = 3;
-			*state = 3;
+			TitleFlg = 2;
+			*state = 1;
 		}
 	}
 	if (isTrigger(KEY_C)) {
@@ -42,6 +43,9 @@ void TITLE::draw() {
 		drawImage(TitleImg, 0, 0);
 	}
 	if (TitleFlg == 1) {
+		drawImage(AsobiImg, 960, 540, 0);
+	}
+	if (TitleFlg == 2) {
 		drawImage(AsobiImg, 960, 540, 0);
 	}
 }

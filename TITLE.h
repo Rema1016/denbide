@@ -14,4 +14,5 @@ private:
 	int TitleImg = 0;
 	int AsobiImg = 0;
 	int HaikeiImg = 0;
+	int State = 0;
 };

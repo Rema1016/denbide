@@ -2,12 +2,12 @@
 #include "window.h"
 #include "graphic.h"
 
-class BULLETS1;
+class BULLETS2;
 
-class PLAYER1 {
+class PLAYER2 {
 public:
-	PLAYER1();
-	~PLAYER1();
+	PLAYER2();
+	~PLAYER2();
 	void init();
 	void update();
 	void draw();
@@ -16,9 +16,9 @@ public:
 	float left();
 	float right();
 	void setLife(int life);
-	static void setBullets(BULLETS1* bullets1) { Bullets1 = bullets1; }
+	static void setBullets(BULLETS2* bullets2) { Bullets2 = bullets2; }
 private:
-	int Player1Img = 0;
+	int Player2Img = 0;
 	int Life = 0;
 	float Px = 0;
 	float Py = 0;
@@ -28,5 +28,6 @@ private:
 	float Under = 0;
 	float Left = 0;
 	float Right = 0;
-	static BULLETS1* Bullets1;
+	static BULLETS2* Bullets2;
 };
+

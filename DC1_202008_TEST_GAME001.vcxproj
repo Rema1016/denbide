@@ -18,6 +18,30 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BULLET1.cpp" />
+    <ClCompile Include="BULLET2.cpp" />
+    <ClCompile Include="BULLETS1.cpp" />
+    <ClCompile Include="BULLETS2.cpp" />
+    <ClCompile Include="GAME.cpp" />
+    <ClCompile Include="GMAIN.cpp" />
+    <ClCompile Include="PLAYER1.cpp" />
+    <ClCompile Include="PLAYER2.cpp" />
+    <ClCompile Include="TITLE.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BULLET1.h" />
+    <ClInclude Include="BULLET2.h" />
+    <ClInclude Include="BULLETS1.h" />
+    <ClInclude Include="BULLETS2.h" />
+    <ClInclude Include="GAME.h" />
+    <ClInclude Include="PLAYER1.h" />
+    <ClInclude Include="PLAYER2.h" />
+    <ClInclude Include="TITLE.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{AF46C3E1-3E0C-4012-84F7-27578692C10D}</ProjectGuid>
@@ -80,7 +104,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)\</OutDir>
+    <OutDir>$(SolutionDir)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -136,6 +160,9 @@
       <AdditionalDependencies>framework.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>../framework/release</AdditionalLibraryDirectories>
     </Link>
+    <PostBuildEvent>
+      <Command>copy $(Configuration)\$(ProjectName).exe</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -157,18 +184,6 @@
       <AdditionalLibraryDirectories>../framework/x64/release</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ResourceCompile Include="resource.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="GMAIN.cpp" />
-    <ClCompile Include="PLAYER1.cpp" />
-    <ClCompile Include="TITLE.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="PLAYER1.h" />
-    <ClInclude Include="TITLE.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
