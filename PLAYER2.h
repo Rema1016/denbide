@@ -3,6 +3,8 @@
 #include "graphic.h"
 
 class BULLETS2;
+class JUDGE;
+class START;
 
 class PLAYER2 {
 public:
@@ -17,6 +19,8 @@ public:
 	float right();
 	void setLife(int life);
 	static void setBullets(BULLETS2* bullets2) { Bullets2 = bullets2; }
+	static void setWinFlg(JUDGE* judge) { Judge = judge; }
+	static void getShotKyoka(START* start) { Start = start; }
 private:
 	int Player2Img = 0;
 	int Life = 0;
@@ -29,5 +33,7 @@ private:
 	float Left = 0;
 	float Right = 0;
 	static BULLETS2* Bullets2;
+	static JUDGE* Judge;
+	static START* Start;
 };
 

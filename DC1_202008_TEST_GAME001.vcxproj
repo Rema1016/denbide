@@ -25,8 +25,10 @@
     <ClCompile Include="BULLETS2.cpp" />
     <ClCompile Include="GAME.cpp" />
     <ClCompile Include="GMAIN.cpp" />
+    <ClCompile Include="JUDGE.cpp" />
     <ClCompile Include="PLAYER1.cpp" />
     <ClCompile Include="PLAYER2.cpp" />
+    <ClCompile Include="START.cpp" />
     <ClCompile Include="TITLE.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -35,8 +37,10 @@
     <ClInclude Include="BULLETS1.h" />
     <ClInclude Include="BULLETS2.h" />
     <ClInclude Include="GAME.h" />
+    <ClInclude Include="JUDGE.h" />
     <ClInclude Include="PLAYER1.h" />
     <ClInclude Include="PLAYER2.h" />
+    <ClInclude Include="START.h" />
     <ClInclude Include="TITLE.h" />
   </ItemGroup>
   <ItemGroup>

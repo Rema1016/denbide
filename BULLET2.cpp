@@ -11,7 +11,7 @@ BULLET2::~BULLET2() {}
 PLAYER1* BULLET2::Player1 = 0;
 
 void BULLET2::init() {
-	Bullet2Img = loadImage("playergm.gif");
+	Bullet2Img = loadImage("bullet.jpg");
 	Life = 0;
 	WindowWidth = 0.0f;
 }

@@ -10,6 +10,8 @@
     <ClCompile Include="PLAYER2.cpp" />
     <ClCompile Include="BULLET2.cpp" />
     <ClCompile Include="BULLETS2.cpp" />
+    <ClCompile Include="JUDGE.cpp" />
+    <ClCompile Include="START.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PLAYER1.h" />
@@ -20,6 +22,8 @@
     <ClInclude Include="PLAYER2.h" />
     <ClInclude Include="BULLET2.h" />
     <ClInclude Include="BULLETS2.h" />
+    <ClInclude Include="JUDGE.h" />
+    <ClInclude Include="START.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resource.rc" />

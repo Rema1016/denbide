@@ -2,12 +2,18 @@
 #include "PLAYER2.h"
 #include "input.h"
 #include "BULLETS2.h"
+#include "JUDGE.h"
+#include "START.h"
 
 PLAYER2::PLAYER2() {}
 
 PLAYER2::~PLAYER2() {}
 
 BULLETS2* PLAYER2::Bullets2 = 0;
+
+JUDGE* PLAYER2::Judge = 0;
+
+START* PLAYER2::Start = 0;
 
 void PLAYER2::init() {
 	Player2Img = loadImage("po1.gif");
@@ -26,9 +32,9 @@ void PLAYER2::init() {
 
 void PLAYER2::update() {
 
-	Top = Py - 60.0f;
-	Under = Py + 60.0f;
-	Left = Px - 70.0f;
+	Top = Py - 78.0f;
+	Under = Py + 48.0f;
+	Left = Px - 100.0f;
 	Right = Px + 60.0f;
 
 	if (isPress(KEY_LEFT)) {
@@ -37,9 +43,17 @@ void PLAYER2::update() {
 	if (isPress(KEY_RIGHT)) {
 		Py -= Dy;
 	}
-	if (isTrigger(KEY_M)) {
-		Bullets2->appear(Px, Py);
+	if (Start->shotKyoka() == 1) {
+		if (isTrigger(KEY_M)) {
+			Bullets2->appear(Px, Py);
+		}
 	}
+	if (Life == 0) {
+		if (Judge->winFlg() == 0) {
+			Judge->setWinFlg(1);
+		}
+	}
+
 }
 
 
